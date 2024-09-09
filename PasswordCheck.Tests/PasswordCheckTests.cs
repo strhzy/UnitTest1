@@ -7,6 +7,18 @@ namespace Password.Tests
     public class PasswordCheckTests
     {
         [TestMethod]
+        public void Checker_NoPassword_0()
+        {
+            //arrange
+            int expected = 0;
+            string password = "";
+            //act
+            int actual = PasswordCheck.Checker(password);
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
         public void Checker_Digits_1()
         {
             //arrange
